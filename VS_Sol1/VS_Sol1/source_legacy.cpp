@@ -1,15 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-#define DEBUG
+#include "main_header.h"
 
 #define ARRAYSIZE_ROW 40
 #define ARRAYSIZE_COLLUM 12
 
 #define MAX_BUFFERSIZE 2048
-
-#pragma warning(disable:4996)
 
 enum direction{North, East, South, West};
 
