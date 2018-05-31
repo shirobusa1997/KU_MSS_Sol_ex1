@@ -9,7 +9,7 @@
 
 #define MAX_BUFFERSIZE 2048
 
-#pragma warning(disable:4996)
+//#pragma warning(disable:4996)
 
 enum direction{North, East, South, West};
 
