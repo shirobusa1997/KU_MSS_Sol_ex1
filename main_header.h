@@ -1,11 +1,6 @@
-#ifndef PREPROCESS
-#define PREPROCESS
-
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
-
-#define DEBUG
 
 #define ARRAYSIZE_ROW 40
 #define ARRAYSIZE_COLLUM 12
@@ -14,23 +9,19 @@
 
 #pragma warning(disable:4996)
 
-#endif
-
 class my_class{
     public:
         //Constructor
         my_class(){
-            #ifdef DEBUG
                 printf("my_class::CONSTRUCTOR :\n--START SOLUTION--\n");
-            #endif
 
-            #ifdef DEBUG
                 printf("my_class::CONSTRUCTOR :\n--SOLUTION COMPLETE--\n");
-            #endif
         };
         //Deconstructor
         ~my_class(){
+                printf("my_class::DECONSTRUCTOR :\n--START SOLUTION--\n");
 
+                printf("my_class::DECONSTRUCTOR :\n--SOLUTION COMPLETE--\n");
         };
 
         enum direction{North, East, South, West};

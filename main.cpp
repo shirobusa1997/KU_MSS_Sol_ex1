@@ -26,6 +26,8 @@ int main(int argc, char **argv){
         return 1;
     }
 
+    mc.ud_input(input, ud);
+
     //Shutdown Process Section
     fclose(input);
 
