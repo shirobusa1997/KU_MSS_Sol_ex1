@@ -10,7 +10,8 @@
 #define STPOS_Y 3
 #define STDIREC North
 
-bool my_class::RouteSearch_Solution(void){
-    
+bool my_master_class::RouteSearch_Solution(Transform transform[EXPRESSION_COUNT][TARGET_MOVEABLE_STEP]){
+    transform[0][0] = {4, 3, STDIREC};
+
     return true;
 }

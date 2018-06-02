@@ -13,7 +13,7 @@ int main(int argc, char **argv){
     int ud[ARRAYSIZE_ROW][ARRAYSIZE_COLLUM] = {0};
     FILE *input;
 
-    my_class mc;
+    my_master_class mc;
 
     if(argc < 2){
         printf("Usage   :%s INPUT_CSV_FILE\n", argv[0]);

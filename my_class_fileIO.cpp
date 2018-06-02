@@ -1,7 +1,7 @@
-//独自ヘッダ"main_header.h"を指定します。これには、my_classの定義が含まれます。
+//独自ヘッダ"main_header.h"を指定します。これには、my_master_classの定義が含まれます。
 #include "main_header.h"
 
-void my_class::ud_input(FILE *fp, int ud[ARRAYSIZE_ROW][ARRAYSIZE_COLLUM]){
+void my_master_class::ud_input(FILE *fp, int ud[ARRAYSIZE_ROW][ARRAYSIZE_COLLUM]){
     char buffer[MAX_BUFFERSIZE] = {0};
     char *buffer2[ARRAYSIZE_COLLUM];
     
@@ -28,6 +28,6 @@ void my_class::ud_input(FILE *fp, int ud[ARRAYSIZE_ROW][ARRAYSIZE_COLLUM]){
        printf("[DEBUG]func:ud_input   :\n--FUNCTION PROCESS COMPLETE--\n");
 }
 
-void my_class::ud_output(void){
+void my_master_class::ud_output(void){
     return;
 }
