@@ -11,29 +11,45 @@
 int main(int argc, char **argv){
     //変数を宣言します。
     int ud[ARRAYSIZE_ROW][ARRAYSIZE_COLLUM] = {0};
-    FILE *input;
 
     my_master_class mc;
 
     if(argc < 2){
-        printf("Usage   :%s INPUT_CSV_FILE\n", argv[0]);
-        return 1;
-    }
+        printf("SYSTEM:入力ファイルが指定されませんでした。\n");
+        printf("      :入力データを自動生成します...\n");
 
-    if((input = fopen(argv[1], "r")) == NULL)
-    {
-        printf("ERROR   :Failed to open INPUT_CSV_FILE...\n");
-        return 1;
-    }
+        mc.ud_input(ud);
 
-    mc.ud_input(input, ud);
+        for(int row = 0; row < ARRAYSIZE_ROW; row++){
+            for(int collum = 0; collum < ARRAYSIZE_COLLUM; collum++){
+                printf("%d ", ud[row][collum]);
+            }
+            printf("\n");
+        }
+
+    }else{
+        FILE *input;
+        if((input = fopen(argv[1], "r")) == NULL)
+        {
+            printf("ERROR   :Failed to open INPUT_CSV_FILE...\n");
+            return 1;
+        }
+
+        mc.ud_input(input, ud);
+
+        for(int row = 0; row < ARRAYSIZE_ROW; row++){
+            for(int collum = 0; collum < ARRAYSIZE_COLLUM; collum++){
+                printf("%d ", ud[row][collum]);
+            }
+            printf("\n");
+        }
+
+        fclose(input);
+    }
 
     //Shutdown Process Section
-    fclose(input);
 
-    #ifdef DEBUG
-       printf("\n\n--SOLUTION COMPLETE--\n");
-    #endif
+    printf("\n--SOLUTION COMPLETE--\n\n");
 
     return 0;
 }

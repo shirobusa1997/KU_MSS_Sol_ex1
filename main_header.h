@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 //マクロを指定します。
 //入力データ格納用配列変数のサイズ設定(行, 列)
@@ -27,15 +28,15 @@ class my_master_class{
     public:
         //Constructor
         my_master_class(){
-                printf("my_master_class::CONSTRUCTOR :\n--START SOLUTION--\n");
+                printf("my_master_class::CONSTRUCTOR :\n--START SOLUTION--\n\n");
 
-                printf("my_master_class::CONSTRUCTOR :\n--SOLUTION COMPLETE--\n");
+                printf("my_master_class::CONSTRUCTOR :\n--SOLUTION COMPLETE--\n\n");
         };
         //Deconstructor
         ~my_master_class(){
-                printf("my_master_class::DECONSTRUCTOR :\n--START SOLUTION--\n");
+                printf("my_master_class::DECONSTRUCTOR :\n--START SOLUTION--\n\n");
 
-                printf("my_master_class::DECONSTRUCTOR :\n--SOLUTION COMPLETE--\n");
+                printf("my_master_class::DECONSTRUCTOR :\n--SOLUTION COMPLETE--\n\n");
         };
 
         enum direction{North, East, South, West};
@@ -48,9 +49,10 @@ class my_master_class{
 
         Transform transform[EXPRESSION_COUNT][TARGET_MOVEABLE_STEP];
 
+        void ud_input(int ud[ARRAYSIZE_ROW][ARRAYSIZE_COLLUM]);
         void ud_input(FILE *fp, int ud[ARRAYSIZE_ROW][ARRAYSIZE_COLLUM]);
         //[Mojatto]Arguments in "RouteSearch_Solution"function is temporary setting.
-        bool RouteSearch_Solution(Transform transform[EXPRESSION_COUNT][TARGET_MOVEABLE_STEP]);
+        bool RouteSearch_Solution(Transform transform[EXPRESSION_COUNT][TARGET_MOVEABLE_STEP], int ud[ARRAYSIZE_ROW][ARRAYSIZE_COLLUM]);
         //[Mojatto]Arguments in "ud_output"function is temporary setting.
         void ud_output(void);
 };
